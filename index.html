@@ -1,17 +1,100 @@
 <!DOCTYPE html>
 <html lang="gu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MS7 AI Quiz</title>
-</head>
-<body style="font-family:Arial;text-align:center;padding:40px;">
-  <h1>🎓 MS7 AI Quiz</h1>
-  <h2>સ્વાગત છે!</h2>
-  <p>આ મારી પ્રથમ AI Quiz વેબસાઇટ છે.</p>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS7 AI Quiz</title>
 
-  <button style="padding:12px 25px;font-size:18px;">
-    કસોટી શરૂ કરો
-  </button>
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f4f4f4;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 0 15px rgba(0,0,0,.2);
+width:300px;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+font-size:16px;
+}
+
+button{
+padding:10px 20px;
+font-size:16px;
+background:#0b7dda;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#095cab;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box" id="login">
+<h2>🔒 MS7 AI Quiz</h2>
+
+<p>પાસવર્ડ દાખલ કરો</p>
+
+<input type="password" id="pass">
+
+<br>
+
+<button onclick="check()">પ્રવેશ કરો</button>
+
+</div>
+
+<div class="box" id="quiz" style="display:none">
+
+<h1>🎓 MS7 AI Quiz</h1>
+
+<h3>સ્વાગત છે મનોજભાઈ</h3>
+
+<p>હવે તમે સુરક્ષિત રીતે વેબસાઇટમાં પ્રવેશ કરી ગયા છો.</p>
+
+</div>
+
+<script>
+
+function check(){
+
+let p=document.getElementById("pass").value;
+
+if(p=="MS7@k2026"){
+
+document.getElementById("login").style.display="none";
+
+document.getElementById("quiz").style.display="block";
+
+}else{
+
+alert("ખોટો પાસવર્ડ");
+
+}
+
+}
+
+</script>
+
 </body>
 </html>
